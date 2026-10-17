@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.wav
+*.csv
+.venv/
+build/
+install/
+log/
