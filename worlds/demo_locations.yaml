@@ -1,0 +1,26 @@
+# demo.world icin hedef yerler.
+# Koordinatlar dunya koordinatlaridir (robot orijinde, x yonune bakarak dogdugu icin odom ile ayni).
+# Hedef noktalar kutularin ~0.6 m onundedir: lidar guvenlik mesafesine (0.5 m) takilmadan ulasilir.
+# "isimler": sesli komutta bu yeri cagiran kelimeler (en az 4 harf; Turkce ekler otomatik taninir:
+#            atolye -> atolyeye, atolyeye; depo -> depoya ...)
+konumlar:
+  atolye:
+    x: 3.0
+    y: 0.0
+    isimler: [atölye, kırmızı]
+  depo:
+    x: 0.0
+    y: 3.0
+    isimler: [depo, mavi]
+  hangar:          # yolunda varil var (0, -2): duz giden kontrolcu engelde durur -> Nav2 motivasyonu
+    x: 0.0
+    y: -3.0
+    isimler: [hangar, yeşil]
+  nizamiye:
+    x: -3.0
+    y: 0.0
+    isimler: [nizamiye, sarı]
+  merkez:
+    x: 0.0
+    y: 0.0
+    isimler: [merkez, başlangıç]

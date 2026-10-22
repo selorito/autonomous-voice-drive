@@ -84,23 +84,24 @@ def match(text, esik=ESIK):
     if OLUMSUZ & set(words):
         return None, 0
 
-    # 3) Hareket: her ifadeyi cumledeki ayni uzunluktaki kelime pencereleriyle karsilastir
-    #    "ileri git siviya cikalim" -> pencereler: "ileri git", "git siviya", "siviya cikalim"
-    bulunan = {}
+    # Her kelime penceresi icin EN IYI komutu sec:
+    #   "geriye git" -> BACKWARD'a 100, FORWARD'a ("ileriye git") 86 benzer -> pencere BACKWARD sayilir
+    pencereler = {}     # (baslangic, uzunluk) -> (komut, skor)
     for komut, ifadeler in KOMUTLAR.items():
         for ifade in ifadeler:
             n = len(ifade.split())
             for i in range(len(words) - n + 1):
-                pencere = " ".join(words[i:i + n])
-                skor = fuzz.ratio(ifade, pencere)
-                if skor >= esik and skor > bulunan.get(komut, 0):
-                    bulunan[komut] = skor
+                skor = fuzz.ratio(ifade, " ".join(words[i:i + n]))
+                if skor >= esik and skor > pencereler.get((i, n), (None, 0))[1]:
+                    pencereler[(i, n)] = (komut, skor)
+    bulunan = {}
+    for komut, skor in pencereler.values():
+        bulunan[komut] = max(skor, bulunan.get(komut, 0))
 
-    # Hic komut yok ya da birden fazla FARKLI komut var -> belirsiz, hicbir sey yapma
+    # Hic komut yok ya da cumlede birden fazla FARKLI komut var -> belirsiz, hicbir sey yapma
     if len(bulunan) != 1:
         return None, 0
-    komut, skor = next(iter(bulunan.items()))
-    return komut, skor
+    return next(iter(bulunan.items()))
 
 
 def show(text, dt_ms, logprob, no_speech):

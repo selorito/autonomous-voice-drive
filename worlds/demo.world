@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!-- Demo sahnesi: robot ortada, 4 m uzakta her yonde farkli renkte bir isaret kutusu.
+     on=kirmizi, sol=mavi, sag=yesil, arka=sari  (watchdog en fazla ~3 m ilerlemeye izin verir)
+     Turuncu variller = engel. varil_sag_yol robotun saga giden yolunu keser (lidar durdurma demosu). -->
+<sdf version="1.6">
+  <world name="default">
+    <include><uri>model://ground_plane</uri></include>
+    <include><uri>model://sun</uri></include>
+
+    <gui fullscreen="0">
+      <camera name="user_camera">
+        <pose>-5 -5 6 0 0.7 0.785</pose>
+      </camera>
+    </gui>
+
+    <model name="kirmizi_on">
+      <static>true</static>
+      <pose>4 0 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.8 0.8 0.8</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>0.8 0.8 0.8</size></box></geometry>
+          <material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="mavi_sol">
+      <static>true</static>
+      <pose>0 4 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.8 0.8 0.8</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>0.8 0.8 0.8</size></box></geometry>
+          <material><ambient>0 0.3 1 1</ambient><diffuse>0 0.3 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="yesil_sag">
+      <static>true</static>
+      <pose>0 -4 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.8 0.8 0.8</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>0.8 0.8 0.8</size></box></geometry>
+          <material><ambient>0 0.8 0 1</ambient><diffuse>0 0.8 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="sari_arka">
+      <static>true</static>
+      <pose>-4 0 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.8 0.8 0.8</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>0.8 0.8 0.8</size></box></geometry>
+          <material><ambient>1 0.85 0 1</ambient><diffuse>1 0.85 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="varil_sag_yol">
+      <static>true</static>
+      <pose>0 -2 0.45 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><cylinder><radius>0.3</radius><length>0.9</length></cylinder></geometry></collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.3</radius><length>0.9</length></cylinder></geometry>
+          <material><ambient>1 0.45 0 1</ambient><diffuse>1 0.45 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="varil_1">
+      <static>true</static>
+      <pose>2.5 2.5 0.45 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><cylinder><radius>0.3</radius><length>0.9</length></cylinder></geometry></collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.3</radius><length>0.9</length></cylinder></geometry>
+          <material><ambient>1 0.45 0 1</ambient><diffuse>1 0.45 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="varil_2">
+      <static>true</static>
+      <pose>-2.5 2.5 0.45 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><cylinder><radius>0.3</radius><length>0.9</length></cylinder></geometry></collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.3</radius><length>0.9</length></cylinder></geometry>
+          <material><ambient>1 0.45 0 1</ambient><diffuse>1 0.45 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="varil_3">
+      <static>true</static>
+      <pose>2.5 -2.5 0.45 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><cylinder><radius>0.3</radius><length>0.9</length></cylinder></geometry></collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.3</radius><length>0.9</length></cylinder></geometry>
+          <material><ambient>1 0.45 0 1</ambient><diffuse>1 0.45 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

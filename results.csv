@@ -1,0 +1,33 @@
+time,speaker,noise,model,prompt,expected,heard,predicted,score,correct,asr_ms,audio_sec,wav
+2026-10-22 18:51:50,selman,sessiz,small,sola dön,LEFT,sola dön,LEFT,100,1,1128,1.99,selman_sessiz_1792684310_1.wav
+2026-10-22 18:52:03,selman,sessiz,small,dur,STOP,dur,STOP,100,1,1077,1.50,selman_sessiz_1792684323_2.wav
+2026-10-22 18:52:08,selman,sessiz,small,ileri git,FORWARD,ileri git,FORWARD,100,1,999,2.22,selman_sessiz_1792684328_3.wav
+2026-10-22 18:52:18,selman,sessiz,small,sola dön sonra ileri git,NONE,"sola dön, sonra ileri git",NONE,0,1,984,2.86,selman_sessiz_1792684338_4.wav
+2026-10-22 18:52:24,selman,sessiz,small,saat kaç oldu,NONE,Saat kaç oldu,NONE,0,1,912,2.60,selman_sessiz_1792684344_5.wav
+2026-10-22 18:52:31,selman,sessiz,small,sakın ileri gitme,NONE,Sakın ilere gitme,NONE,0,1,1042,2.57,selman_sessiz_1792684351_6.wav
+2026-10-22 18:52:39,selman,sessiz,small,durum raporu ver,NONE,durum röpürü versin,NONE,0,1,1472,2.76,selman_sessiz_1792684359_7.wav
+2026-10-22 18:52:45,selman,sessiz,small,dur,STOP,dur,STOP,100,1,1104,1.53,selman_sessiz_1792684365_8.wav
+2026-10-22 18:52:50,selman,sessiz,small,bugün hava çok güzel,NONE,Bugün hava çok güzel,NONE,0,1,1089,2.27,selman_sessiz_1792684370_9.wav
+2026-10-22 18:52:54,selman,sessiz,small,sola dön,LEFT,sola dön,LEFT,100,1,1077,1.79,selman_sessiz_1792684374_10.wav
+2026-10-22 18:52:59,selman,sessiz,small,sağa dön,RIGHT,sağa dön,RIGHT,100,1,1099,1.81,selman_sessiz_1792684379_11.wav
+2026-10-22 18:53:02,selman,sessiz,small,ilerle,FORWARD,ilerle,FORWARD,100,1,1255,1.55,selman_sessiz_1792684382_12.wav
+2026-10-22 18:53:06,selman,sessiz,small,geriye git,BACKWARD,geriye git,BACKWARD,100,1,1040,1.83,selman_sessiz_1792684386_13.wav
+2026-10-22 18:53:10,selman,sessiz,small,sağa dön,RIGHT,sağa dön,RIGHT,100,1,978,1.71,selman_sessiz_1792684390_14.wav
+2026-10-22 18:53:15,selman,sessiz,small,"bekle biraz, dur",STOP,"Bekle, biraz dur",STOP,100,1,983,2.50,selman_sessiz_1792684395_15.wav
+2026-10-22 18:53:20,selman,sessiz,small,geri git,BACKWARD,geri git,BACKWARD,100,1,997,1.82,selman_sessiz_1792684400_16.wav
+2026-10-22 18:54:37,selman,muzik,small,sola dön sonra ileri git,NONE,"sola dön, sonra ileri git",NONE,0,1,1135,2.90,selman_muzik_1792684477_1.wav
+2026-10-22 18:54:42,selman,muzik,small,dur,STOP,dur,STOP,100,1,952,1.60,selman_muzik_1792684482_2.wav
+2026-10-22 18:54:48,selman,muzik,small,"bekle biraz, dur",STOP,"Bekle, biraz dur",STOP,100,1,1075,2.96,selman_muzik_1792684488_3.wav
+2026-10-22 18:54:53,selman,muzik,small,sağa dön,RIGHT,sağa dön,RIGHT,100,1,1025,2.03,selman_muzik_1792684493_4.wav
+2026-10-22 18:54:58,selman,muzik,small,sağa dön,RIGHT,sağa dön,RIGHT,100,1,990,2.11,selman_muzik_1792684498_5.wav
+2026-10-22 18:55:03,selman,muzik,small,geri git,BACKWARD,geri git,BACKWARD,100,1,1030,1.96,selman_muzik_1792684503_6.wav
+2026-10-22 18:55:07,selman,muzik,small,geriye git,BACKWARD,"geri git, geri git",BACKWARD,100,1,999,1.41,selman_muzik_1792684507_7.wav
+2026-10-22 18:55:13,selman,muzik,small,ileri git,FORWARD,ileri git,FORWARD,100,1,1063,1.55,selman_muzik_1792684513_8.wav
+2026-10-22 18:55:19,selman,muzik,small,bugün hava çok güzel,NONE,okulağı çok güzel,NONE,0,1,997,1.86,selman_muzik_1792684519_9.wav
+2026-10-22 18:55:24,selman,muzik,small,sola dön,LEFT,sola dön,LEFT,100,1,986,1.52,selman_muzik_1792684524_10.wav
+2026-10-22 18:55:31,selman,muzik,small,saat kaç oldu,NONE,"sağa dön, dur",STOP,100,0,3685,2.40,selman_muzik_1792684531_11.wav
+2026-10-22 18:55:36,selman,muzik,small,dur,STOP,dur,STOP,100,1,1000,1.30,selman_muzik_1792684536_12.wav
+2026-10-22 18:55:40,selman,muzik,small,ilerle,FORWARD,ilerle,FORWARD,100,1,1025,2.42,selman_muzik_1792684540_13.wav
+2026-10-22 18:55:45,selman,muzik,small,sakın ileri gitme,NONE,"sağa dön, geri git, sola dön",NONE,0,1,1131,2.29,selman_muzik_1792684545_14.wav
+2026-10-22 18:55:49,selman,muzik,small,sola dön,LEFT,Allah kahretsin,NONE,0,0,983,2.12,selman_muzik_1792684549_15.wav
+2026-10-22 18:55:55,selman,muzik,small,durum raporu ver,NONE,kurumla kurumla,NONE,0,1,989,2.10,selman_muzik_1792684555_16.wav

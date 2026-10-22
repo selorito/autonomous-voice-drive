@@ -24,13 +24,20 @@ Splitting the system into two nodes keeps speech recognition (~1 s per utterance
 | BACKWARD | "geri git", "geriye gidin" (go back) | Move backward at 0.2 m/s |
 | LEFT / RIGHT | "sola dön", "sağa dön" (turn left / right) | Turn ~90° in place |
 | STOP | "dur", "stop" | Stop immediately |
+| GOTO | "atölyeye git", "kırmızıya git", "merkeze dön" (go to the workshop / red / back to base) | Navigate to a named location |
+
+Named locations are defined per world in `worlds/demo_locations.yaml` (name → coordinates + spoken aliases).
+Turkish suffixes are handled automatically ("depo" → "depoya", "atölye" → "atölyesine").
+A movement verb is required, so "atölye nerede?" (*where is the workshop?*) does not move the vehicle.
 
 ## Safety rules
 
 - **STOP has priority**: If "dur" appears anywhere in the sentence, the vehicle stops.
 - **Negation**: "Sakın ileri gitme" (*don't go forward*) does not move the vehicle.
 - **Ambiguity rejection**: A sentence containing more than one different command is ignored.
-- **Watchdog**: The vehicle stops if no new command arrives for 15 s.
+- **Watchdog**: The vehicle stops if no new command arrives for 15 s (GOTO uses a distance-based timeout instead).
+- **Lidar obstacle stop**: The vehicle stops (and refuses new commands) if an obstacle is within 0.5 m in its direction of travel.
+- **Fail-safe**: No lidar data for 1 s, or no odometry during GOTO, means no motion.
 - **Offline**: No internet connection required.
 
 ## Installation (Ubuntu 22.04 + ROS2 Humble)
@@ -44,12 +51,22 @@ export TURTLEBOT3_MODEL=burger
 ## Usage
 
 ```bash
-# Terminal 1
-ros2 launch turtlebot3_gazebo empty_world.launch.py
-# Terminal 2
-python3 motion_node.py
-# Terminal 3
+# Terminal 1: Gazebo demo scene + TurtleBot3 + motion_node
+ros2 launch launch/demo.launch.py
+# Terminal 2: voice control (push-to-talk needs keyboard input, so it runs separately)
 python3 voice_node.py
+```
+
+The demo scene (`worlds/demo.world`) places a colored marker 4 m away in each direction
+(front: red = workshop, left: blue = depot, right: green = hangar, back: yellow = gate) plus orange barrels as obstacles.
+A barrel deliberately blocks the straight path to the hangar: the straight-line GOTO controller stops in front of it,
+which demonstrates the safety layer and motivates map-based navigation (Nav2) as the next step.
+
+## Evaluation
+
+```bash
+python3 collect_test.py --speaker <name> --noise <quiet|music|...>   # guided recording session
+python3 report.py                                                     # accuracy, false actions, missed STOPs, latency
 ```
 
 `whisper_test.py`: Tests speech recognition and command matching without ROS.
@@ -59,5 +76,6 @@ python3 voice_node.py
 - Fine-tune Whisper on vehicle/engine noise
 - Speaker verification so only authorized operators are accepted
 - ASR-independent keyword spotting for STOP
+- Map-based navigation around obstacles with Nav2 (SLAM + path planning)
 - Closed-loop turn control using `/odom`
 - Port to embedded hardware such as Jetson

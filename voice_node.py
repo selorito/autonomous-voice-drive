@@ -9,6 +9,7 @@ Calistirma (Gazebo + motion_node acikken):
     python3 voice_node.py
 Cikmak icin: Ctrl+C
 """
+import os
 import re
 import threading
 import time
@@ -16,6 +17,7 @@ import time
 import numpy as np
 import rclpy
 import sounddevice as sd
+import yaml
 from faster_whisper import WhisperModel
 from rapidfuzz import fuzz
 from rclpy.node import Node
@@ -27,8 +29,20 @@ DEVICE = "cpu"
 COMPUTE = "int8"
 SR = 16000
 MAX_RECORD_SEC = 6.0    # bundan uzun kayitlarin fazlasi atilir
-PROMPT = "ileri git, geri git, sola dön, sağa dön, dur"
 ESIK = 85
+
+# ---- Hedef yerler (motion_node ile ayni dosya) ----
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+LOCATIONS_FILE = os.environ.get("LOCATIONS_FILE",
+                                os.path.join(PROJECT_DIR, "worlds", "demo_locations.yaml"))
+with open(LOCATIONS_FILE, encoding="utf-8") as _f:
+    # {"atolye": ["atölye", "kırmızı"], "depo": [...], ...}
+    YER_ISIMLERI = {k: [n.lower() for n in v["isimler"]]
+                    for k, v in yaml.safe_load(_f)["konumlar"].items()}
+
+# Whisper'a yer isimlerini de ipucu olarak ver
+PROMPT = "ileri git, geri git, sola dön, sağa dön, dur, " + \
+         ", ".join(isim for isimler in YER_ISIMLERI.values() for isim in isimler)
 
 KOMUTLAR = {
     "FORWARD":  ["ileri git", "ileriye git", "ileri gidin", "ilerle", "ileri"],
@@ -38,6 +52,9 @@ KOMUTLAR = {
 }
 STOP_KELIMELERI = {"dur", "durun", "dursun", "durdur", "stop"}
 OLUMSUZ = {"gitme", "gitmeyin", "dönme", "dönmeyin", "gelme", "ilerleme"}
+# GOTO icin cumlede bunlardan biri olmali: "atolye nerede" araci hareket ettirmesin
+HAREKET_FIILLERI = {"git", "gidin", "gel", "gelin", "dön", "dönün", "ilerle", "sür", "götür"}
+EK_PAYI = 5     # isimden sonra en fazla bu kadar harf ek kabul edilir (atölye + "sine")
 
 
 # ---- whisper_test.py'deki fonksiyonlar (degismedi) ----
@@ -49,6 +66,21 @@ def normalize(text):
     return " ".join(words)
 
 
+def find_locations(words, esik=ESIK):
+    """Cumledeki yer isimlerini bulur. Turkce ek icin kelimenin bas kismina bakar:
+    'depoya'[:4] = 'depo', 'kırmızıya'[:7] = 'kırmızı'."""
+    found = {}
+    for w in words:
+        for yer, isimler in YER_ISIMLERI.items():
+            for isim in isimler:
+                if not (len(isim) <= len(w) <= len(isim) + EK_PAYI):
+                    continue
+                skor = fuzz.ratio(isim, w[:len(isim)])
+                if skor >= esik:
+                    found[yer] = max(skor, found.get(yer, 0))
+    return found
+
+
 def match(text, esik=ESIK):
     words = text.split()
     if not words:
@@ -57,17 +89,41 @@ def match(text, esik=ESIK):
         return "STOP", 100
     if OLUMSUZ & set(words):
         return None, 0
-    bulunan = {}
+
+    hareket = match_motion(words, esik)
+    yerler = find_locations(words, esik)
+    if yerler:
+        if len(yerler) > 1:                          # "depoya sonra atolyeye git" -> belirsiz
+            return None, 0
+        if not (HAREKET_FIILLERI & set(words)):      # "atolye nerede" -> hareket yok
+            return None, 0
+        if set(hareket) - {"FORWARD"}:               # "sola don depoya git" -> celiskili
+            return None, 0
+        yer, skor = next(iter(yerler.items()))
+        return f"GOTO {yer}", skor
+
+    if len(hareket) != 1:
+        return None, 0
+    return next(iter(hareket.items()))
+
+
+def match_motion(words, esik=ESIK):
+    """Ileri/geri/sol/sag komutlarini bulur -> {komut: skor} (onceki match mantigi)."""
+    # Her kelime penceresi icin EN IYI komutu sec:
+    #   "geriye git" -> BACKWARD'a 100, FORWARD'a ("ileriye git") 86 benzer -> pencere BACKWARD sayilir
+    pencereler = {}     # (baslangic, uzunluk) -> (komut, skor)
     for komut, ifadeler in KOMUTLAR.items():
         for ifade in ifadeler:
             n = len(ifade.split())
             for i in range(len(words) - n + 1):
                 skor = fuzz.ratio(ifade, " ".join(words[i:i + n]))
-                if skor >= esik and skor > bulunan.get(komut, 0):
-                    bulunan[komut] = skor
-    if len(bulunan) != 1:
-        return None, 0
-    return next(iter(bulunan.items()))
+                if skor >= esik and skor > pencereler.get((i, n), (None, 0))[1]:
+                    pencereler[(i, n)] = (komut, skor)
+    bulunan = {}
+    for komut, skor in pencereler.values():
+        bulunan[komut] = max(skor, bulunan.get(komut, 0))
+    # Birden fazla FARKLI komut varsa match() belirsiz sayar ve hicbir sey yapmaz
+    return bulunan
 
 
 # ---- Bas-konus kayit ----
