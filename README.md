@@ -71,6 +71,27 @@ python3 report.py                                                     # accuracy
 
 `whisper_test.py`: Tests speech recognition and command matching without ROS.
 
+## Crane simulation (`crane/`)
+
+A truck-mounted telescopic boom crane (MPG style) on a work site with four areas
+(stock, depot, workshop, shipping), four loads and a workshop building.
+
+- **Joints**: slew (360°), luff (0–75°), telescope (7.6–13.6 m), hoist (0–12 m). The sheave counter-rotates
+  with the boom so the rope always hangs vertically.
+- **Kinematics** (`crane_geometry.py`): closed-form IK puts the boom tip above any target; joints move
+  together with per-joint speed limits.
+- **Single source of truth**: `gen_world.py` builds `worlds/crane_site.world` from `crane_geometry.py` + `sites.yaml`,
+  and the controller uses the same files.
+
+```bash
+ros2 launch crane/launch/crane.launch.py
+ros2 topic pub --once /crane/command std_msgs/msg/String "{data: 'MOVE kirmizi_kasa depo'}"
+ros2 topic echo /crane/status
+```
+
+Commands: `MOVE <load> <area>`, `PICK <load>`, `PLACE <area>`, `HOME`, `STOP`.
+Unknown loads/areas, full areas, a busy crane and unreachable targets are rejected with a reason.
+
 ## Roadmap
 
 - Fine-tune Whisper on vehicle/engine noise

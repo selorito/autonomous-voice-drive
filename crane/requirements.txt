@@ -1,0 +1,7 @@
+faster-whisper
+sounddevice
+numpy
+rapidfuzz
+python-can
+cantools
+pyyaml

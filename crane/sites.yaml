@@ -1,0 +1,78 @@
+# Vinc sahasi: alanlar ve yukler.
+# gen_world.py dunyayi bu dosyadan uretir; crane_controller.py yuk/alan konumlarini buradan okur.
+# "isimler": sesli komutta kullanilan kelimeler.
+# "can_id": CAN mesajlarinda bu alan/yukun numarasi (crane.dbc ile ayni olmali).
+
+alanlar:            # 5x5 m zemin isaretleri; her alanda 4 yuk yeri (slot) var
+  stok:
+    can_id: 1
+    x: -2.0
+    y: -9.0
+    renk: "0.55 0.55 0.55 1"
+    isimler: [stok, stok alanı]
+  depo:
+    can_id: 2
+    x: -2.0
+    y: 9.0
+    renk: "0.10 0.35 0.90 1"
+    isimler: [depo]
+  atolye:
+    can_id: 3
+    x: -11.0
+    y: 3.0
+    renk: "0.95 0.45 0.10 1"
+    isimler: [atölye]
+  sevkiyat:
+    can_id: 4
+    x: -10.0
+    y: -6.0
+    renk: "0.10 0.70 0.20 1"
+    isimler: [sevkiyat, yükleme]
+
+slot_offsets:       # alan merkezine gore yuk yerleri
+  - [-1.2, -1.2]
+  - [ 1.2, -1.2]
+  - [-1.2,  1.2]
+  - [ 1.2,  1.2]
+
+yuk_tipleri:        # boyut [x, y, z] (m); kasalar palet ustunde
+  kasa: [1.2, 1.2, 1.1]
+  blok: [1.6, 1.0, 0.8]
+
+yukler:
+  kirmizi_kasa:
+    can_id: 1
+    tip: kasa
+    renk: "0.85 0.10 0.10 1"
+    alan: stok
+    slot: 0
+    isimler: [kırmızı kasa, kırmızı,]
+  mavi_kasa:
+    can_id: 2
+    tip: kasa
+    renk: "0.10 0.25 0.85 1"
+    alan: stok
+    slot: 1
+    isimler: [mavi kasa, mavi]
+  beyaz_kasa:
+    can_id: 3
+    tip: kasa
+    renk: "0.95 0.95 0.95 1"
+    alan: stok
+    slot: 2
+    isimler: [beyaz kasa, beyaz]
+  beton_blok:
+    can_id: 4
+    tip: blok
+    renk: "0.40 0.40 0.48 1"
+    alan: stok
+    slot: 3
+    isimler: [beton blok, beton]
+
+
+engeller:           # statik yapilar (ileride bom-carpisma kontrolu icin)
+  atolye_binasi:
+    x: -17.0
+    y: 3.0
+    boyut: [5.0, 8.0, 6.0]
+    renk: "0.70 0.45 0.35 1"
