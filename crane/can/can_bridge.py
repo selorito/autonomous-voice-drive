@@ -37,6 +37,8 @@ CAN_INTERFACE = os.environ.get("CAN_INTERFACE", "socketcan")
 CAN_CHANNEL = os.environ.get("CAN_CHANNEL", "vcan0")
 REQUIRE_HEARTBEAT = os.environ.get("REQUIRE_HEARTBEAT", "1") == "1"
 HEARTBEAT_TIMEOUT = 1.0
+STATE_TIMEOUT = 2.0               # kontrolcuden bu kadar durum gelmezse -> FAULT
+STARTUP_GRACE = 5.0               # acilista kontrolcunun ilk durumunu bu kadar bekle (FAULT verme)
 NMT_OPERATIONAL = 5
 
 
@@ -55,6 +57,9 @@ class CanBridge(Node):
 
         self.lock = threading.Lock()
         self.state = None                 # son /crane/state (dict)
+        self.state_time = None            # son durumun geldigi an (monotonic)
+        self.fault_logged = False
+        self.start_time = time.monotonic()
         self.last_counter = None
         self.voice_hb = None              # son sesli kumanda heartbeat zamani (monotonic)
         self.can_task_active = False      # CAN'den baslatilmis gorev suruyor mu
@@ -131,17 +136,28 @@ class CanBridge(Node):
     def on_state(self, msg):
         with self.lock:
             self.state = json.loads(msg.data)
+            self.state_time = time.monotonic()
             if self.state["state"] != "BUSY":
                 self.can_task_active = False
 
     def send_status(self):
         with self.lock:
-            st = self.state
-        if st is None:
+            st, t = self.state, self.state_time
+        if st is None and time.monotonic() - self.start_time < STARTUP_GRACE:
+            return                                    # kontrolcu henuz acilmadi; durum bilinmiyor
+        if st is None or time.monotonic() - t > STATE_TIMEOUT:
+            # Kontrolcu yok/cokmus: eski durumu tekrarlamak yerine ARIZA bildir, eklem verisi gonderme
+            self.send("CRANE_STATUS", {"State": "FAULT", "TasksLeft": 0, "AttachedLoad": "NONE", "StopReason": "NONE"})
+            if not self.fault_logged:
+                self.get_logger().error("crane_controller'dan durum gelmiyor -> CAN'e FAULT bildiriliyor")
+                self.fault_logged = True
             return
+        if self.fault_logged:
+            self.get_logger().info("crane_controller geri geldi")
+            self.fault_logged = False
         attached = st["attached"] or "NONE"
         self.send("CRANE_STATUS", {"State": st["state"], "TasksLeft": min(255, st["tasks_left"]),
-                                   "AttachedLoad": attached})
+                                   "AttachedLoad": attached, "StopReason": st.get("stop_reason") or "NONE"})
         q = st["q"]
         self.send("CRANE_JOINTS", {"Slew": round(q["slew_deg"], 2), "Luff": round(q["luff_deg"], 2),
                                    "Tele": round(q["tele_m"], 3), "Hoist": round(q["hoist_m"], 3)})
@@ -156,7 +172,7 @@ class CanBridge(Node):
         with self.lock:
             active, hb, tripped = self.can_task_active, self.voice_hb, self.wd_tripped
         if active and not tripped and (hb is None or time.monotonic() - hb > HEARTBEAT_TIMEOUT):
-            self.cmd_pub.publish(String(data="STOP"))
+            self.cmd_pub.publish(String(data="STOP heartbeat"))
             with self.lock:
                 self.wd_tripped = True
                 self.can_task_active = False

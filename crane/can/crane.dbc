@@ -23,10 +23,11 @@ BO_ 256 CRANE_CMD: 4 VOICE_ECU
  SG_ AreaId : 16|8@1+ (1,0) [0|255] "" CRANE_ECU
  SG_ Counter : 24|8@1+ (1,0) [0|255] "" CRANE_ECU
 
-BO_ 512 CRANE_STATUS: 3 CRANE_ECU
+BO_ 512 CRANE_STATUS: 4 CRANE_ECU
  SG_ State : 0|8@1+ (1,0) [0|255] "" VOICE_ECU
  SG_ TasksLeft : 8|8@1+ (1,0) [0|255] "" VOICE_ECU
  SG_ AttachedLoad : 16|8@1+ (1,0) [0|255] "" VOICE_ECU
+ SG_ StopReason : 24|8@1+ (1,0) [0|255] "" VOICE_ECU
 
 BO_ 513 CRANE_ACK: 2 CRANE_ECU
  SG_ Counter : 0|8@1+ (1,0) [0|255] "" VOICE_ECU
@@ -47,7 +48,7 @@ BO_ 1824 CRANE_HEARTBEAT: 1 CRANE_ECU
 
 CM_ BO_ 16 "Acil durdurma. En kucuk ID = CAN hattinda en yuksek oncelik.";
 CM_ BO_ 256 "Sesli kumandadan vince gorev komutu. Counter her yeni komutta artar; ayni Counter tekrar gelirse yok sayilir.";
-CM_ BO_ 512 "Vinc durumu, 10 Hz.";
+CM_ BO_ 512 "Vinc durumu, 10 Hz. FAULT: vinc kontrolcusu 2 sn yanit vermedi. StopReason: STOPPED durumunun sebebi.";
 CM_ BO_ 513 "Her CRANE_CMD icin sonuc.";
 CM_ BO_ 768 "Eklem telemetrisi, 10 Hz.";
 CM_ BO_ 1808 "Sesli kumanda heartbeat, 10 Hz. Vinc calisirken 1 sn gelmezse vinc durur (dead-man).";
@@ -56,7 +57,8 @@ CM_ BO_ 1824 "Vinc ECU heartbeat, 1 Hz.";
 VAL_ 256 CmdType 1 "MOVE" 2 "PICK" 3 "PLACE" 4 "HOME" ;
 VAL_ 256 LoadId 0 "NONE" 1 "kirmizi_kasa" 2 "mavi_kasa" 3 "beyaz_kasa" 4 "beton_blok" ;
 VAL_ 256 AreaId 0 "NONE" 1 "stok" 2 "depo" 3 "atolye" 4 "sevkiyat" ;
-VAL_ 512 State 0 "IDLE" 1 "BUSY" 2 "STOPPED" ;
+VAL_ 512 State 0 "IDLE" 1 "BUSY" 2 "STOPPED" 3 "FAULT" ;
+VAL_ 512 StopReason 0 "NONE" 1 "OPERATOR" 2 "VISION_MISMATCH" 3 "HEARTBEAT_LOST" ;
 VAL_ 512 AttachedLoad 0 "NONE" 1 "kirmizi_kasa" 2 "mavi_kasa" 3 "beyaz_kasa" 4 "beton_blok" ;
 VAL_ 513 Result 0 "OK" 1 "BUSY" 2 "UNKNOWN_LOAD" 3 "UNKNOWN_AREA" 4 "AREA_FULL" 5 "UNREACHABLE" 6 "HOOK_OCCUPIED" 7 "HOOK_EMPTY" 8 "BAD_COMMAND" 9 "DUPLICATE" ;
 VAL_ 1808 NmtState 5 "OPERATIONAL" ;

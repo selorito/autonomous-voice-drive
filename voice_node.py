@@ -1,14 +1,16 @@
 """
 voice_node: mikrofon -> Whisper -> komut esleme -> /voice/command (String)
 
-Bas-konus (push-to-talk) mantigi:
-    Enter -> kayit baslar, konus, Enter -> kayit biter ve islenir
-    (Sabit 3 sn yerine sadece konustugun kadar kayit -> daha dusuk gecikme)
+Modlar:
+    python3 voice_node.py         SUREKLI dinleme (Silero VAD) + wake word: "Robot, atölyeye git"
+                                  Sadece "robot" denirse 6 sn icindeki sonraki cumle kabul edilir.
+                                  "dur" wake word ARANMADAN her zaman gecer.
+    python3 voice_node.py --ptt   bas-konus: Enter -> konus -> Enter (wake word gerekmez)
 
-Calistirma (Gazebo + motion_node acikken):
-    python3 voice_node.py
+Calistirma (Gazebo + motion_node acikken).
 Cikmak icin: Ctrl+C
 """
+import argparse
 import os
 import re
 import threading
@@ -41,7 +43,7 @@ with open(LOCATIONS_FILE, encoding="utf-8") as _f:
                     for k, v in yaml.safe_load(_f)["konumlar"].items()}
 
 # Whisper'a yer isimlerini de ipucu olarak ver
-PROMPT = "ileri git, geri git, sola dön, sağa dön, dur, " + \
+PROMPT = "robot, ileri git, geri git, sola dön, sağa dön, dur, " + \
          ", ".join(isim for isimler in YER_ISIMLERI.values() for isim in isimler)
 
 KOMUTLAR = {
@@ -156,12 +158,22 @@ class VoiceNode(Node):
         )
         return " ".join(s.text.strip() for s in segments)   # generator burada tuketiliyor
 
-    def process_audio(self, audio):
+    def process_audio(self, audio, gate=None):
         t = time.time()
         text = self.transcribe(audio)
         asr_ms = (time.time() - t) * 1000
 
         komut, skor = match(normalize(text))
+        if gate is not None:                     # surekli dinleme: wake word kapisi
+            status, rest = gate.check(text, is_stop=(komut == "STOP"))
+            if status == "no_wake":
+                self.get_logger().info(f"wake word yok -> yok sayildi  '{text}'")
+                return
+            if status == "armed":
+                self.get_logger().info("dinliyorum... (komutu soyle)")
+                return
+            if status == "ok":
+                komut, skor = match(normalize(rest))
         if komut is None:
             self.get_logger().warn(f"ANLAŞILMADI  '{text}'  ({asr_ms:.0f} ms) -> araca komut gonderilmedi")
             return
@@ -171,6 +183,11 @@ class VoiceNode(Node):
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--ptt", action="store_true", help="bas-konus (Enter) modu, wake word yok")
+    ap.add_argument("--wake", default="robot", help="wake word (varsayilan: robot)")
+    args = ap.parse_args()
+
     print(f"Model yükleniyor: {MODEL} / {DEVICE} / {COMPUTE}")
     model = WhisperModel(MODEL, device=DEVICE, compute_type=COMPUTE)
     model.transcribe(np.zeros(SR, dtype=np.float32), language="tr")   # isinma
@@ -180,15 +197,25 @@ def main():
     # ROS'u arka planda dondur, ana thread klavye + mikrofonla ilgilensin
     threading.Thread(target=rclpy.spin, args=(node,), daemon=True).start()
 
-    print("\nHazır. Enter'a bas -> konuş -> tekrar Enter.  (Çıkış: Ctrl+C)\n")
     try:
-        while rclpy.ok():
-            input("[Enter] konuşmaya başla...")
-            print("  ● Kayıt... (bitince Enter)")
-            audio = record_push_to_talk()
-            print(f"  Kayıt süresi: {len(audio) / SR:.1f} sn, işleniyor...")
-            node.process_audio(audio)
-            print()
+        if args.ptt:
+            print("\nHazır (bas-konuş). Enter'a bas -> konuş -> tekrar Enter.  (Çıkış: Ctrl+C)\n")
+            while rclpy.ok():
+                input("[Enter] konuşmaya başla...")
+                print("  ● Kayıt... (bitince Enter)")
+                audio = record_push_to_talk()
+                print(f"  Kayıt süresi: {len(audio) / SR:.1f} sn, işleniyor...")
+                node.process_audio(audio)
+                print()
+        else:
+            from audio_listener import SpeechListener, WakeGate
+            gate = WakeGate([args.wake])
+            print(f"\nHazır (sürekli dinleme). Komutlar '{args.wake}' ile başlar: "
+                  f"'{args.wake.capitalize()}, atölyeye git'. 'Dur' her zaman geçer.  (Çıkış: Ctrl+C)\n")
+            for audio in SpeechListener().utterances():
+                if not rclpy.ok():
+                    break
+                node.process_audio(audio, gate)
     except (KeyboardInterrupt, EOFError):
         pass
     finally:

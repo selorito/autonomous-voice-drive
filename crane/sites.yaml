@@ -3,29 +3,30 @@
 # "isimler": sesli komutta kullanilan kelimeler.
 # "can_id": CAN mesajlarinda bu alan/yukun numarasi (crane.dbc ile ayni olmali).
 
-alanlar:            # 5x5 m zemin isaretleri; her alanda 4 yuk yeri (slot) var
+alanlar:            # 6x6 m beton zemin; her alanda 4 yuk yeri (slot) var. Yolun iki yaninda (y = +-9).
+                    # Kamyon yolda (y=0) kule ekseni alanin x'ine gelecek sekilde park eder (otomatik).
   stok:
     can_id: 1
-    x: -2.0
+    x: -30.0
     y: -9.0
     renk: "0.55 0.55 0.55 1"
     isimler: [stok, stok alanı]
-  depo:
-    can_id: 2
-    x: -2.0
-    y: 9.0
-    renk: "0.10 0.35 0.90 1"
-    isimler: [depo]
   atolye:
     can_id: 3
-    x: -11.0
-    y: 3.0
+    x: -10.0
+    y: 9.0
     renk: "0.95 0.45 0.10 1"
     isimler: [atölye]
+  depo:
+    can_id: 2
+    x: 12.0
+    y: -9.0
+    renk: "0.10 0.35 0.90 1"
+    isimler: [depo]
   sevkiyat:
     can_id: 4
-    x: -10.0
-    y: -6.0
+    x: 32.0
+    y: 9.0
     renk: "0.10 0.70 0.20 1"
     isimler: [sevkiyat, yükleme]
 
@@ -46,7 +47,7 @@ yukler:
     renk: "0.85 0.10 0.10 1"
     alan: stok
     slot: 0
-    isimler: [kırmızı kasa, kırmızı,]
+    isimler: [kırmızı kasa, kırmızı]
   mavi_kasa:
     can_id: 2
     tip: kasa
@@ -64,15 +65,19 @@ yukler:
   beton_blok:
     can_id: 4
     tip: blok
-    renk: "0.40 0.40 0.48 1"
+    renk: "0.50 0.50 0.48 1"
     alan: stok
     slot: 3
     isimler: [beton blok, beton]
 
-
-engeller:           # statik yapilar (ileride bom-carpisma kontrolu icin)
+engeller:           # statik binalar (ileride bom-carpisma kontrolu icin); alanlarin arkasinda
   atolye_binasi:
-    x: -17.0
-    y: 3.0
-    boyut: [5.0, 8.0, 6.0]
-    renk: "0.70 0.45 0.35 1"
+    x: -10.0
+    y: 22.0
+    boyut: [16.0, 8.0, 7.0]
+    renk: "0.62 0.36 0.28 1"
+  depo_binasi:
+    x: 12.0
+    y: -22.0
+    boyut: [18.0, 9.0, 8.0]
+    renk: "0.55 0.58 0.62 1"

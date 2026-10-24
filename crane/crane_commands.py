@@ -109,3 +109,22 @@ def parse(text, loads=None, areas=None):
     if load and not area and (TASI | KOY) & ws:
         return {"cmd": None, "reason": "nereye? hedef alan yok"}
     return {"cmd": None, "reason": "komut anlaşılmadı (fiil veya yük/alan eksik)"}
+
+
+# ---------------- Onay cevabi ----------------
+EVET = {"evet", "onaylıyorum", "onayla", "onaylı", "onay", "tamam", "olur", "doğru", "eveet"}
+HAYIR = {"hayır", "iptal", "vazgeç", "vazgeçtim", "olmaz", "istemiyorum", "yok"}
+
+
+def parse_answer(text):
+    """Onay sorusuna cevap -> 'yes' | 'no' | 'stop' | None (anlasilmadi).
+    'dur' her zaman 'stop'; hem evet hem hayir iceren cumle belirsiz sayilir."""
+    words = set(normalize(text).split())
+    if STOP & words:
+        return "stop"
+    yes, no = bool(EVET & words), bool(HAYIR & words)
+    if yes and not no:
+        return "yes"
+    if no and not yes:
+        return "no"
+    return None

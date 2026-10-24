@@ -11,74 +11,546 @@
       <update_rate>1.0</update_rate>
     </plugin>
 
+    <scene>
+      <ambient>0.55 0.55 0.55 1</ambient>
+      <background>0.70 0.80 0.95 1</background>
+      <shadows>true</shadows>
+      <sky><clouds><speed>3</speed></clouds></sky>
+    </scene>
+
     <gui fullscreen="0">
       <camera name="user_camera">
-        <pose>14 -20 15 0 0.420 2.304</pose>
+        <pose>-20 -48 30 0 0.529 1.212</pose>
       </camera>
     </gui>
 
+    <model name="saha"><static>true</static><pose>0 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="asfalt"><pose>0 0 0.01 0 0 0</pose>
+          <geometry><box><size>110 80 0.02</size></box></geometry><material><ambient>0.22 0.22 0.23 1</ambient><diffuse>0.22 0.22 0.23 1</diffuse></material></visual>
+        <visual name="yol"><pose>0 0 0.022 0 0 0</pose>
+          <geometry><box><size>104 8 0.004</size></box></geometry><material><ambient>0.15 0.15 0.16 1</ambient><diffuse>0.15 0.15 0.16 1</diffuse></material></visual>
+        <visual name="serit_l"><pose>0 3.85 0.026 0 0 0</pose>
+          <geometry><box><size>104 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="serit_r"><pose>0 -3.85 0.026 0 0 0</pose>
+          <geometry><box><size>104 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_0"><pose>-50 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_1"><pose>-44 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_2"><pose>-38 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_3"><pose>-32 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_4"><pose>-26 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_5"><pose>-20 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_6"><pose>-14 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_7"><pose>-8 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_8"><pose>-2 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_9"><pose>4 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_10"><pose>10 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_11"><pose>16 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_12"><pose>22 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_13"><pose>28 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_14"><pose>34 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_15"><pose>40 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="orta_16"><pose>46 0 0.026 0 0 0</pose>
+          <geometry><box><size>3 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <model name="alan_stok"><static>true</static><pose>-30 -9 0 0 0 0</pose>
+      <link name="link">
+        <visual name="zemin"><pose>0 0 0.024 0 0 0</pose>
+          <geometry><box><size>6 6 0.006</size></box></geometry><material><ambient>0.26 0.26 0.27 1</ambient><diffuse>0.26 0.26 0.27 1</diffuse></material></visual>
+        <visual name="cizgi_0"><pose>0 3 0.029 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_1"><pose>0 -3 0.029 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_2"><pose>3 0 0.029 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_3"><pose>-3 0 0.029 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="direk"><pose>3.6 -3.6 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.07</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="tabela"><pose>3.6 -3.6 3.2 0 0 0</pose>
+          <geometry><box><size>2.2 0.08 1</size></box></geometry><material><ambient>0.55 0.55 0.55 1</ambient><diffuse>0.55 0.55 0.55 1</diffuse></material></visual>
+        <visual name="tabela_cerceve"><pose>3.6 -3.6 3.2 0 0 0</pose>
+          <geometry><box><size>2.3 0.06 1.1</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="park_stok"><static>true</static><pose>-28 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="park_0"><pose>0 1.7 0.03 0 0 0</pose>
+          <geometry><box><size>10.2 0.12 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_1"><pose>0 -1.7 0.03 0 0 0</pose>
+          <geometry><box><size>10.2 0.12 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_2"><pose>5.05 0 0.03 0 0 0</pose>
+          <geometry><box><size>0.12 3.4 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_3"><pose>-5.05 0 0.03 0 0 0</pose>
+          <geometry><box><size>0.12 3.4 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="alan_atolye"><static>true</static><pose>-10 9 0 0 0 0</pose>
+      <link name="link">
+        <visual name="zemin"><pose>0 0 0.024 0 0 0</pose>
+          <geometry><box><size>6 6 0.006</size></box></geometry><material><ambient>0.26 0.26 0.27 1</ambient><diffuse>0.26 0.26 0.27 1</diffuse></material></visual>
+        <visual name="cizgi_0"><pose>0 3 0.029 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_1"><pose>0 -3 0.029 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_2"><pose>3 0 0.029 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_3"><pose>-3 0 0.029 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="direk"><pose>3.6 3.6 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.07</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="tabela"><pose>3.6 3.6 3.2 0 0 0</pose>
+          <geometry><box><size>2.2 0.08 1</size></box></geometry><material><ambient>0.95 0.45 0.10 1</ambient><diffuse>0.95 0.45 0.10 1</diffuse></material></visual>
+        <visual name="tabela_cerceve"><pose>3.6 3.6 3.2 0 0 0</pose>
+          <geometry><box><size>2.3 0.06 1.1</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="park_atolye"><static>true</static><pose>-8 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="park_0"><pose>0 1.7 0.03 0 0 0</pose>
+          <geometry><box><size>10.2 0.12 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_1"><pose>0 -1.7 0.03 0 0 0</pose>
+          <geometry><box><size>10.2 0.12 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_2"><pose>5.05 0 0.03 0 0 0</pose>
+          <geometry><box><size>0.12 3.4 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_3"><pose>-5.05 0 0.03 0 0 0</pose>
+          <geometry><box><size>0.12 3.4 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="alan_depo"><static>true</static><pose>12 -9 0 0 0 0</pose>
+      <link name="link">
+        <visual name="zemin"><pose>0 0 0.024 0 0 0</pose>
+          <geometry><box><size>6 6 0.006</size></box></geometry><material><ambient>0.26 0.26 0.27 1</ambient><diffuse>0.26 0.26 0.27 1</diffuse></material></visual>
+        <visual name="cizgi_0"><pose>0 3 0.029 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_1"><pose>0 -3 0.029 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_2"><pose>3 0 0.029 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_3"><pose>-3 0 0.029 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="direk"><pose>3.6 -3.6 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.07</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="tabela"><pose>3.6 -3.6 3.2 0 0 0</pose>
+          <geometry><box><size>2.2 0.08 1</size></box></geometry><material><ambient>0.10 0.35 0.90 1</ambient><diffuse>0.10 0.35 0.90 1</diffuse></material></visual>
+        <visual name="tabela_cerceve"><pose>3.6 -3.6 3.2 0 0 0</pose>
+          <geometry><box><size>2.3 0.06 1.1</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="park_depo"><static>true</static><pose>14 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="park_0"><pose>0 1.7 0.03 0 0 0</pose>
+          <geometry><box><size>10.2 0.12 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_1"><pose>0 -1.7 0.03 0 0 0</pose>
+          <geometry><box><size>10.2 0.12 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_2"><pose>5.05 0 0.03 0 0 0</pose>
+          <geometry><box><size>0.12 3.4 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_3"><pose>-5.05 0 0.03 0 0 0</pose>
+          <geometry><box><size>0.12 3.4 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="alan_sevkiyat"><static>true</static><pose>32 9 0 0 0 0</pose>
+      <link name="link">
+        <visual name="zemin"><pose>0 0 0.024 0 0 0</pose>
+          <geometry><box><size>6 6 0.006</size></box></geometry><material><ambient>0.26 0.26 0.27 1</ambient><diffuse>0.26 0.26 0.27 1</diffuse></material></visual>
+        <visual name="cizgi_0"><pose>0 3 0.029 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_1"><pose>0 -3 0.029 0 0 0</pose>
+          <geometry><box><size>6.15 0.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_2"><pose>3 0 0.029 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="cizgi_3"><pose>-3 0 0.029 0 0 0</pose>
+          <geometry><box><size>0.15 6.15 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="direk"><pose>3.6 3.6 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.07</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="tabela"><pose>3.6 3.6 3.2 0 0 0</pose>
+          <geometry><box><size>2.2 0.08 1</size></box></geometry><material><ambient>0.10 0.70 0.20 1</ambient><diffuse>0.10 0.70 0.20 1</diffuse></material></visual>
+        <visual name="tabela_cerceve"><pose>3.6 3.6 3.2 0 0 0</pose>
+          <geometry><box><size>2.3 0.06 1.1</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="park_sevkiyat"><static>true</static><pose>34 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="park_0"><pose>0 1.7 0.03 0 0 0</pose>
+          <geometry><box><size>10.2 0.12 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_1"><pose>0 -1.7 0.03 0 0 0</pose>
+          <geometry><box><size>10.2 0.12 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_2"><pose>5.05 0 0.03 0 0 0</pose>
+          <geometry><box><size>0.12 3.4 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+        <visual name="park_3"><pose>-5.05 0 0.03 0 0 0</pose>
+          <geometry><box><size>0.12 3.4 0.004</size></box></geometry><material><ambient>0.95 0.80 0.10 1</ambient><diffuse>0.95 0.80 0.10 1</diffuse></material></visual>
+      </link>
+    </model>
+
+    <model name="atolye_binasi"><static>true</static><pose>-10 22 0 0 0 0</pose>
+      <link name="link">
+        <visual name="duvar"><pose>0 0 3.5 0 0 0</pose>
+          <geometry><box><size>16 8 7</size></box></geometry><material><ambient>0.62 0.36 0.28 1</ambient><diffuse>0.62 0.36 0.28 1</diffuse></material></visual>
+        <collision name="duvar_col"><pose>0 0 3.5 0 0 0</pose>
+          <geometry><box><size>16 8 7</size></box></geometry></collision>
+        <visual name="cati"><pose>0 0 7.15 0 0 0</pose>
+          <geometry><box><size>16.6 8.6 0.3</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="kapi"><pose>0 -4.02 2.25 0 0 0</pose>
+          <geometry><box><size>5 0.04 4.5</size></box></geometry><material><ambient>0.30 0.32 0.35 1</ambient><diffuse>0.30 0.32 0.35 1</diffuse></material></visual>
+        <visual name="pencere_0"><pose>-6.5 -4.02 5 0 0 0</pose>
+          <geometry><box><size>1.6 0.04 1.1</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
+        <visual name="pencere_1"><pose>-3.5 -4.02 5 0 0 0</pose>
+          <geometry><box><size>1.6 0.04 1.1</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
+        <visual name="pencere_4"><pose>5.5 -4.02 5 0 0 0</pose>
+          <geometry><box><size>1.6 0.04 1.1</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="depo_binasi"><static>true</static><pose>12 -22 0 0 0 0</pose>
+      <link name="link">
+        <visual name="duvar"><pose>0 0 4 0 0 0</pose>
+          <geometry><box><size>18 9 8</size></box></geometry><material><ambient>0.55 0.58 0.62 1</ambient><diffuse>0.55 0.58 0.62 1</diffuse></material></visual>
+        <collision name="duvar_col"><pose>0 0 4 0 0 0</pose>
+          <geometry><box><size>18 9 8</size></box></geometry></collision>
+        <visual name="cati"><pose>0 0 8.15 0 0 0</pose>
+          <geometry><box><size>18.6 9.6 0.3</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="kapi"><pose>0 4.52 2.25 0 0 0</pose>
+          <geometry><box><size>5 0.04 4.5</size></box></geometry><material><ambient>0.30 0.32 0.35 1</ambient><diffuse>0.30 0.32 0.35 1</diffuse></material></visual>
+        <visual name="pencere_0"><pose>-7.5 4.52 6 0 0 0</pose>
+          <geometry><box><size>1.6 0.04 1.1</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
+        <visual name="pencere_1"><pose>-4.5 4.52 6 0 0 0</pose>
+          <geometry><box><size>1.6 0.04 1.1</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
+        <visual name="pencere_4"><pose>4.5 4.52 6 0 0 0</pose>
+          <geometry><box><size>1.6 0.04 1.1</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
+        <visual name="pencere_5"><pose>7.5 4.52 6 0 0 0</pose>
+          <geometry><box><size>1.6 0.04 1.1</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="ofis"><static>true</static><pose>-44 20 0 0 0 0</pose>
+      <link name="link">
+        <visual name="duvar"><pose>0 0 3 0 0 0</pose>
+          <geometry><box><size>12 8 6</size></box></geometry><material><ambient>0.80 0.74 0.62 1</ambient><diffuse>0.80 0.74 0.62 1</diffuse></material></visual>
+        <collision name="duvar_col"><pose>0 0 3 0 0 0</pose>
+          <geometry><box><size>12 8 6</size></box></geometry></collision>
+        <visual name="cati"><pose>0 0 6.15 0 0 0</pose>
+          <geometry><box><size>12.6 8.6 0.3</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="kapi"><pose>0 -4.02 2.25 0 0 0</pose>
+          <geometry><box><size>5 0.04 4.5</size></box></geometry><material><ambient>0.30 0.32 0.35 1</ambient><diffuse>0.30 0.32 0.35 1</diffuse></material></visual>
+        <visual name="pencere_0"><pose>-4.5 -4.02 4 0 0 0</pose>
+          <geometry><box><size>1.6 0.04 1.1</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
+        <visual name="pencere_3"><pose>4.5 -4.02 4 0 0 0</pose>
+          <geometry><box><size>1.6 0.04 1.1</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="hangar"><static>true</static><pose>40 -26 0 0 0 0</pose>
+      <link name="link">
+        <visual name="taban"><pose>0 0 2 0 0 0</pose>
+          <geometry><box><size>24 14 4</size></box></geometry><material><ambient>0.50 0.53 0.50 1</ambient><diffuse>0.50 0.53 0.50 1</diffuse></material></visual>
+        <collision name="taban_col"><pose>0 0 2 0 0 0</pose>
+          <geometry><box><size>24 14 4</size></box></geometry></collision>
+        <visual name="kemer"><pose>0 0 4 0 1.5708 0</pose>
+          <geometry><cylinder><radius>7.0</radius><length>24.0</length></cylinder></geometry><material><ambient>0.55 0.58 0.55 1</ambient><diffuse>0.55 0.58 0.55 1</diffuse></material></visual>
+        <visual name="hangar_kapi"><pose>12.02 0 3.5 0 0 0</pose>
+          <geometry><box><size>0.04 10 7</size></box></geometry><material><ambient>0.30 0.32 0.35 1</ambient><diffuse>0.30 0.32 0.35 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="konteynerler"><static>true</static><pose>-44 -26 0 0 0 0</pose>
+      <link name="link">
+        <visual name="konteyner_0"><pose>0 0 1.3 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.70 0.35 0.15 1</ambient><diffuse>0.70 0.35 0.15 1</diffuse></material></visual>
+        <visual name="konteyner_1"><pose>0 0 3.9 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.25 0.35 0.45 1</ambient><diffuse>0.25 0.35 0.45 1</diffuse></material></visual>
+        <visual name="konteyner_2"><pose>0 2.6 1.3 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.30 0.45 0.30 1</ambient><diffuse>0.30 0.45 0.30 1</diffuse></material></visual>
+        <visual name="konteyner_3"><pose>0 2.6 3.9 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.55 0.50 0.40 1</ambient><diffuse>0.55 0.50 0.40 1</diffuse></material></visual>
+        <visual name="konteyner_4"><pose>0 2.6 6.5 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.70 0.35 0.15 1</ambient><diffuse>0.70 0.35 0.15 1</diffuse></material></visual>
+        <visual name="konteyner_5"><pose>0 5.2 1.3 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.25 0.35 0.45 1</ambient><diffuse>0.25 0.35 0.45 1</diffuse></material></visual>
+        <visual name="konteyner_6"><pose>0 5.2 3.9 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.30 0.45 0.30 1</ambient><diffuse>0.30 0.45 0.30 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="konteynerler_2"><static>true</static><pose>30 26 0 0 0 0</pose>
+      <link name="link">
+        <visual name="k2_0"><pose>0 0 1.3 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.70 0.35 0.15 1</ambient><diffuse>0.70 0.35 0.15 1</diffuse></material></visual>
+        <visual name="k2_1"><pose>0 0 3.9 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.25 0.35 0.45 1</ambient><diffuse>0.25 0.35 0.45 1</diffuse></material></visual>
+        <visual name="k2_2"><pose>0 2.6 1.3 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.30 0.45 0.30 1</ambient><diffuse>0.30 0.45 0.30 1</diffuse></material></visual>
+        <visual name="k2_3"><pose>0 2.6 3.9 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.55 0.50 0.40 1</ambient><diffuse>0.55 0.50 0.40 1</diffuse></material></visual>
+        <visual name="k2_4"><pose>0 2.6 6.5 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.70 0.35 0.15 1</ambient><diffuse>0.70 0.35 0.15 1</diffuse></material></visual>
+        <visual name="k2_5"><pose>0 5.2 1.3 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.25 0.35 0.45 1</ambient><diffuse>0.25 0.35 0.45 1</diffuse></material></visual>
+        <visual name="k2_6"><pose>0 5.2 3.9 0 0 0</pose>
+          <geometry><box><size>6.1 2.44 2.59</size></box></geometry><material><ambient>0.30 0.45 0.30 1</ambient><diffuse>0.30 0.45 0.30 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="direkler"><static>true</static><pose>0 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="direk_0_1"><pose>-48 5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_0_1"><pose>-48 4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_0_1"><pose>-48 3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_0_-1"><pose>-48 -5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_0_-1"><pose>-48 -4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_0_-1"><pose>-48 -3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_1_1"><pose>-32 5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_1_1"><pose>-32 4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_1_1"><pose>-32 3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_1_-1"><pose>-32 -5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_1_-1"><pose>-32 -4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_1_-1"><pose>-32 -3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_2_1"><pose>-16 5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_2_1"><pose>-16 4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_2_1"><pose>-16 3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_2_-1"><pose>-16 -5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_2_-1"><pose>-16 -4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_2_-1"><pose>-16 -3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_3_1"><pose>0 5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_3_1"><pose>0 4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_3_1"><pose>0 3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_3_-1"><pose>0 -5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_3_-1"><pose>0 -4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_3_-1"><pose>0 -3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_4_1"><pose>16 5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_4_1"><pose>16 4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_4_1"><pose>16 3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_4_-1"><pose>16 -5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_4_-1"><pose>16 -4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_4_-1"><pose>16 -3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_5_1"><pose>32 5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_5_1"><pose>32 4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_5_1"><pose>32 3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_5_-1"><pose>32 -5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_5_-1"><pose>32 -4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_5_-1"><pose>32 -3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_6_1"><pose>48 5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_6_1"><pose>48 4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_6_1"><pose>48 3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="direk_6_-1"><pose>48 -5.2 4 0 0 0</pose>
+          <geometry><cylinder><radius>0.12</radius><length>8.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="kol_6_-1"><pose>48 -4.4 7.9 0 0 0</pose>
+          <geometry><box><size>0.12 1.6 0.12</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="lamba_6_-1"><pose>48 -3.7 7.8 0 0 0</pose>
+          <geometry><box><size>0.5 0.3 0.12</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="agaclar"><static>true</static><pose>0 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="govde_0"><pose>-50 37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_0"><pose>-50 37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_1"><pose>-50 -37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_1"><pose>-50 -37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_2"><pose>-40 37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_2"><pose>-40 37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_3"><pose>-40 -37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_3"><pose>-40 -37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_4"><pose>-30 37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_4"><pose>-30 37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_5"><pose>-30 -37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_5"><pose>-30 -37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_6"><pose>-20 37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_6"><pose>-20 37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_7"><pose>-20 -37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_7"><pose>-20 -37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_8"><pose>-10 37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_8"><pose>-10 37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_9"><pose>-10 -37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_9"><pose>-10 -37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_10"><pose>0 37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_10"><pose>0 37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_11"><pose>0 -37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_11"><pose>0 -37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_12"><pose>10 37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_12"><pose>10 37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_13"><pose>10 -37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_13"><pose>10 -37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_14"><pose>20 37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_14"><pose>20 37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_15"><pose>20 -37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_15"><pose>20 -37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_16"><pose>30 37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_16"><pose>30 37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_17"><pose>30 -37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_17"><pose>30 -37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_18"><pose>40 37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_18"><pose>40 37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_19"><pose>40 -37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_19"><pose>40 -37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_20"><pose>50 37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_20"><pose>50 37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+        <visual name="govde_21"><pose>50 -37 1.5 0 0 0</pose>
+          <geometry><cylinder><radius>0.25</radius><length>3.0</length></cylinder></geometry><material><ambient>0.40 0.27 0.15 1</ambient><diffuse>0.40 0.27 0.15 1</diffuse></material></visual>
+        <visual name="yaprak_21"><pose>50 -37 4.2 0 0 0</pose>
+          <geometry><sphere><radius>2.0</radius></sphere></geometry><material><ambient>0.20 0.45 0.18 1</ambient><diffuse>0.20 0.45 0.18 1</diffuse></material></visual>
+      </link>
+    </model>
+    <model name="cit"><static>true</static><pose>0 0 0 0 0 0</pose>
+      <link name="link">
+        <visual name="cit_0"><pose>0 39.5 1.1 0 0 0</pose>
+          <geometry><box><size>110 0.08 2.2</size></box></geometry><material><ambient>0.35 0.40 0.35 1</ambient><diffuse>0.35 0.40 0.35 1</diffuse></material></visual>
+        <visual name="cit_1"><pose>0 -39.5 1.1 0 0 0</pose>
+          <geometry><box><size>110 0.08 2.2</size></box></geometry><material><ambient>0.35 0.40 0.35 1</ambient><diffuse>0.35 0.40 0.35 1</diffuse></material></visual>
+        <visual name="cit_2"><pose>54.5 0 1.1 0 0 0</pose>
+          <geometry><box><size>0.08 79 2.2</size></box></geometry><material><ambient>0.35 0.40 0.35 1</ambient><diffuse>0.35 0.40 0.35 1</diffuse></material></visual>
+        <visual name="cit_3"><pose>-54.5 0 1.1 0 0 0</pose>
+          <geometry><box><size>0.08 79 2.2</size></box></geometry><material><ambient>0.35 0.40 0.35 1</ambient><diffuse>0.35 0.40 0.35 1</diffuse></material></visual>
+      </link>
+    </model>
+
     <model name="mpg_crane">
-      <pose>0 0 0 0 0 0</pose>
+      <pose>0.0 0 0 0 0 0</pose>
       <link name="base_link">
         <pose>0 0 0 0 0 0</pose>
-        <gravity>1</gravity>
+        <kinematic>1</kinematic>
+        <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>20000</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
-        <visual name="wheel_0_0"><pose>3.2 -1.05 0.5 1.5708 0 0</pose>
-          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
-        <visual name="wheel_0_1"><pose>3.2 1.05 0.5 1.5708 0 0</pose>
-          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
-        <visual name="wheel_1_0"><pose>1.9 -1.05 0.5 1.5708 0 0</pose>
-          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
-        <visual name="wheel_1_1"><pose>1.9 1.05 0.5 1.5708 0 0</pose>
-          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
-        <visual name="wheel_2_0"><pose>-1.6 -1.05 0.5 1.5708 0 0</pose>
-          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
-        <visual name="wheel_2_1"><pose>-1.6 1.05 0.5 1.5708 0 0</pose>
-          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
-        <visual name="wheel_3_0"><pose>-3 -1.05 0.5 1.5708 0 0</pose>
-          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
-        <visual name="wheel_3_1"><pose>-3 1.05 0.5 1.5708 0 0</pose>
-          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
         <visual name="chassis"><pose>0 0 1 0 0 0</pose>
-          <geometry><box><size>9 2.2 0.4</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+          <geometry><box><size>9 2.2 0.4</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
         <visual name="deck"><pose>-1 0 1.45 0 0 0</pose>
           <geometry><box><size>6.8 2.5 0.3</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
+        <visual name="deck_rail_l"><pose>1 1.2 1.72 0 0 0</pose>
+          <geometry><box><size>2.6 0.08 0.25</size></box></geometry><material><ambient>0.75 0.55 0.15 1</ambient><diffuse>0.75 0.55 0.15 1</diffuse></material></visual>
+        <visual name="deck_rail_r"><pose>1 -1.2 1.72 0 0 0</pose>
+          <geometry><box><size>2.6 0.08 0.25</size></box></geometry><material><ambient>0.75 0.55 0.15 1</ambient><diffuse>0.75 0.55 0.15 1</diffuse></material></visual>
         <visual name="cab"><pose>3.55 0 2.15 0 0 0</pose>
-          <geometry><box><size>1.9 2.5 2.1</size></box></geometry><material><ambient>0.95 0.95 0.95 1</ambient><diffuse>0.95 0.95 0.95 1</diffuse></material></visual>
+          <geometry><box><size>1.9 2.5 2.1</size></box></geometry><material><ambient>0.90 0.70 0.25 1</ambient><diffuse>0.90 0.70 0.25 1</diffuse></material></visual>
+        <visual name="cab_roof"><pose>3.5 0 3.25 0 0 0</pose>
+          <geometry><box><size>1.7 2.3 0.1</size></box></geometry><material><ambient>0.75 0.55 0.15 1</ambient><diffuse>0.75 0.55 0.15 1</diffuse></material></visual>
         <visual name="windshield"><pose>4.51 0 2.55 0 0 0</pose>
-          <geometry><box><size>0.04 2.2 0.8</size></box></geometry><material><ambient>0.20 0.30 0.45 1</ambient><diffuse>0.20 0.30 0.45 1</diffuse></material></visual>
+          <geometry><box><size>0.04 2.2 0.8</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
+        <visual name="side_window_l"><pose>3.9 1.26 2.6 0 0 0</pose>
+          <geometry><box><size>0.9 0.02 0.6</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
+        <visual name="side_window_r"><pose>3.9 -1.26 2.6 0 0 0</pose>
+          <geometry><box><size>0.9 0.02 0.6</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
         <visual name="bumper"><pose>4.45 0 1.2 0 0 0</pose>
-          <geometry><box><size>0.2 2.5 0.4</size></box></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
-        <visual name="outr_beam_0_0"><pose>2.4 -1.9 1 0 0 0</pose>
-          <geometry><box><size>0.35 1.6 0.3</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
-        <visual name="outr_jack_0_0"><pose>2.4 -2.7 0.55 0 0 0</pose>
-          <geometry><box><size>0.25 0.25 0.9</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
-        <visual name="outr_pad_0_0"><pose>2.4 -2.7 0.04 0 0 0</pose>
-          <geometry><box><size>0.7 0.7 0.08</size></box></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
-        <visual name="outr_beam_0_1"><pose>2.4 1.9 1 0 0 0</pose>
-          <geometry><box><size>0.35 1.6 0.3</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
-        <visual name="outr_jack_0_1"><pose>2.4 2.7 0.55 0 0 0</pose>
-          <geometry><box><size>0.25 0.25 0.9</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
-        <visual name="outr_pad_0_1"><pose>2.4 2.7 0.04 0 0 0</pose>
-          <geometry><box><size>0.7 0.7 0.08</size></box></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
-        <visual name="outr_beam_1_0"><pose>-4 -1.9 1 0 0 0</pose>
-          <geometry><box><size>0.35 1.6 0.3</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
-        <visual name="outr_jack_1_0"><pose>-4 -2.7 0.55 0 0 0</pose>
-          <geometry><box><size>0.25 0.25 0.9</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
-        <visual name="outr_pad_1_0"><pose>-4 -2.7 0.04 0 0 0</pose>
-          <geometry><box><size>0.7 0.7 0.08</size></box></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
-        <visual name="outr_beam_1_1"><pose>-4 1.9 1 0 0 0</pose>
-          <geometry><box><size>0.35 1.6 0.3</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
-        <visual name="outr_jack_1_1"><pose>-4 2.7 0.55 0 0 0</pose>
-          <geometry><box><size>0.25 0.25 0.9</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
-        <visual name="outr_pad_1_1"><pose>-4 2.7 0.04 0 0 0</pose>
-          <geometry><box><size>0.7 0.7 0.08</size></box></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><box><size>0.2 2.5 0.4</size></box></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+        <visual name="headlight_l"><pose>4.56 0.9 1.5 0 0 0</pose>
+          <geometry><box><size>0.04 0.35 0.18</size></box></geometry><material><ambient>0.95 0.90 0.60 1</ambient><diffuse>0.95 0.90 0.60 1</diffuse></material></visual>
+        <visual name="headlight_r"><pose>4.56 -0.9 1.5 0 0 0</pose>
+          <geometry><box><size>0.04 0.35 0.18</size></box></geometry><material><ambient>0.95 0.90 0.60 1</ambient><diffuse>0.95 0.90 0.60 1</diffuse></material></visual>
+        <visual name="beacon"><pose>3.5 0 3.38 0 0 0</pose>
+          <geometry><box><size>0.3 0.3 0.16</size></box></geometry><material><ambient>0.95 0.55 0.05 1</ambient><diffuse>0.95 0.55 0.05 1</diffuse></material></visual>
+        <visual name="fender_l0"><pose>3.2 1.1 1.08 0 0 0</pose>
+          <geometry><box><size>1.15 0.45 0.06</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="fender_r0"><pose>3.2 -1.1 1.08 0 0 0</pose>
+          <geometry><box><size>1.15 0.45 0.06</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="fender_l1"><pose>1.9 1.1 1.08 0 0 0</pose>
+          <geometry><box><size>1.15 0.45 0.06</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="fender_r1"><pose>1.9 -1.1 1.08 0 0 0</pose>
+          <geometry><box><size>1.15 0.45 0.06</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="fender_l2"><pose>-1.6 1.1 1.08 0 0 0</pose>
+          <geometry><box><size>1.15 0.45 0.06</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="fender_r2"><pose>-1.6 -1.1 1.08 0 0 0</pose>
+          <geometry><box><size>1.15 0.45 0.06</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="fender_l3"><pose>-3 1.1 1.08 0 0 0</pose>
+          <geometry><box><size>1.15 0.45 0.06</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="fender_r3"><pose>-3 -1.1 1.08 0 0 0</pose>
+          <geometry><box><size>1.15 0.45 0.06</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
       </link>
       <link name="turret">
         <pose>-2 0 1.6 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>1.0</mass>
@@ -87,16 +559,17 @@
         <visual name="housing"><pose>-0.2 0 0.55 0 0 0</pose>
           <geometry><box><size>2.6 2.2 1.1</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
         <visual name="counterweight"><pose>-1.7 0 0.55 0 0 0</pose>
-          <geometry><box><size>0.9 2.3 1.1</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+          <geometry><box><size>0.9 2.3 1.1</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
         <visual name="op_cab"><pose>0.3 -1.35 0.75 0 0 0</pose>
-          <geometry><box><size>1.3 0.6 1.2</size></box></geometry><material><ambient>0.95 0.95 0.95 1</ambient><diffuse>0.95 0.95 0.95 1</diffuse></material></visual>
+          <geometry><box><size>1.3 0.6 1.2</size></box></geometry><material><ambient>0.90 0.70 0.25 1</ambient><diffuse>0.90 0.70 0.25 1</diffuse></material></visual>
         <visual name="op_window"><pose>0.96 -1.35 0.95 0 0 0</pose>
-          <geometry><box><size>0.04 0.5 0.6</size></box></geometry><material><ambient>0.20 0.30 0.45 1</ambient><diffuse>0.20 0.30 0.45 1</diffuse></material></visual>
+          <geometry><box><size>0.04 0.5 0.6</size></box></geometry><material><ambient>0.15 0.22 0.32 1</ambient><diffuse>0.15 0.22 0.32 1</diffuse></material></visual>
         <visual name="boom_mount"><pose>0.9 0 0.9 0 0 0</pose>
-          <geometry><box><size>0.6 1 0.8</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
+          <geometry><box><size>0.6 1 0.8</size></box></geometry><material><ambient>0.75 0.55 0.15 1</ambient><diffuse>0.75 0.55 0.15 1</diffuse></material></visual>
       </link>
       <link name="boom">
         <pose>-1.1 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>1.0</mass>
@@ -104,9 +577,12 @@
         </inertial>
         <visual name="boom_base"><pose>3.4 0 0 0 0 0</pose>
           <geometry><box><size>8 0.8 0.7</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
+        <visual name="boom_stripe"><pose>3.4 0 0.36 0 0 0</pose>
+          <geometry><box><size>7.6 0.5 0.02</size></box></geometry><material><ambient>0.75 0.55 0.15 1</ambient><diffuse>0.75 0.55 0.15 1</diffuse></material></visual>
       </link>
       <link name="tele">
         <pose>-0.3 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>1.0</mass>
@@ -115,222 +591,431 @@
         <visual name="boom_tele"><pose>3.4 0 0 0 0 0</pose>
           <geometry><box><size>6.8 0.56 0.5</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
         <visual name="boom_head"><pose>6.8 0 0 0 0 0</pose>
-          <geometry><box><size>0.8 0.65 0.75</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
+          <geometry><box><size>0.8 0.65 0.75</size></box></geometry><material><ambient>0.75 0.55 0.15 1</ambient><diffuse>0.75 0.55 0.15 1</diffuse></material></visual>
       </link>
       <link name="sheave">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>1.0</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="sheave_block"><pose>0 0 -0.05 0 0 0</pose>
-          <geometry><box><size>0.35 0.45 1.4</size></box></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><box><size>0.35 0.45 1.4</size></box></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
         <visual name="pulley"><pose>0 0 0 1.5708 0 0</pose>
           <geometry><cylinder><radius>0.32</radius><length>0.5</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="camera_housing"><pose>0 0.6 -0.22 0 0 0</pose>
+          <geometry><box><size>0.22 0.18 0.16</size></box></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+        <visual name="camera_arm"><pose>0 0.3 -0.2 0 0 0</pose>
+          <geometry><box><size>0.06 0.6 0.06</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <sensor name="hook_camera" type="camera">
+          <pose>0.0 0.6 -0.3 0 1.5708 0</pose>
+          <always_on>1</always_on>
+          <update_rate>10</update_rate>
+          <camera>
+            <horizontal_fov>1.2</horizontal_fov>
+            <image><width>640</width><height>480</height><format>R8G8B8</format></image>
+            <clip><near>0.2</near><far>80</far></clip>
+          </camera>
+          <plugin name="hook_camera_plugin" filename="libgazebo_ros_camera.so">
+            <ros><namespace>/crane</namespace></ros>
+            <camera_name>hook_camera</camera_name>
+            <frame_name>hook_camera</frame_name>
+          </plugin>
+        </sensor>
+      </link>
+      <link name="axle_0">
+        <pose>3.2 0 0.5 0 0 0</pose>
+        <kinematic>0</kinematic>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <inertial><mass>1.0</mass>
+          <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
+        </inertial>
+        <visual name="tyre_0"><pose>0 -1.05 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+        <visual name="rim_0"><pose>0 -1.26 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.28</radius><length>0.02</length></cylinder></geometry><material><ambient>0.55 0.55 0.58 1</ambient><diffuse>0.55 0.55 0.58 1</diffuse></material></visual>
+        <visual name="spoke_a0"><pose>0 -1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.5 0.02 0.07</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="spoke_b0"><pose>0 -1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.07 0.02 0.5</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="tyre_1"><pose>0 1.05 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+        <visual name="rim_1"><pose>0 1.26 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.28</radius><length>0.02</length></cylinder></geometry><material><ambient>0.55 0.55 0.58 1</ambient><diffuse>0.55 0.55 0.58 1</diffuse></material></visual>
+        <visual name="spoke_a1"><pose>0 1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.5 0.02 0.07</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="spoke_b1"><pose>0 1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.07 0.02 0.5</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+      </link>
+      <link name="axle_1">
+        <pose>1.9 0 0.5 0 0 0</pose>
+        <kinematic>0</kinematic>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <inertial><mass>1.0</mass>
+          <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
+        </inertial>
+        <visual name="tyre_0"><pose>0 -1.05 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+        <visual name="rim_0"><pose>0 -1.26 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.28</radius><length>0.02</length></cylinder></geometry><material><ambient>0.55 0.55 0.58 1</ambient><diffuse>0.55 0.55 0.58 1</diffuse></material></visual>
+        <visual name="spoke_a0"><pose>0 -1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.5 0.02 0.07</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="spoke_b0"><pose>0 -1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.07 0.02 0.5</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="tyre_1"><pose>0 1.05 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+        <visual name="rim_1"><pose>0 1.26 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.28</radius><length>0.02</length></cylinder></geometry><material><ambient>0.55 0.55 0.58 1</ambient><diffuse>0.55 0.55 0.58 1</diffuse></material></visual>
+        <visual name="spoke_a1"><pose>0 1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.5 0.02 0.07</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="spoke_b1"><pose>0 1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.07 0.02 0.5</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+      </link>
+      <link name="axle_2">
+        <pose>-1.6 0 0.5 0 0 0</pose>
+        <kinematic>0</kinematic>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <inertial><mass>1.0</mass>
+          <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
+        </inertial>
+        <visual name="tyre_0"><pose>0 -1.05 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+        <visual name="rim_0"><pose>0 -1.26 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.28</radius><length>0.02</length></cylinder></geometry><material><ambient>0.55 0.55 0.58 1</ambient><diffuse>0.55 0.55 0.58 1</diffuse></material></visual>
+        <visual name="spoke_a0"><pose>0 -1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.5 0.02 0.07</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="spoke_b0"><pose>0 -1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.07 0.02 0.5</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="tyre_1"><pose>0 1.05 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+        <visual name="rim_1"><pose>0 1.26 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.28</radius><length>0.02</length></cylinder></geometry><material><ambient>0.55 0.55 0.58 1</ambient><diffuse>0.55 0.55 0.58 1</diffuse></material></visual>
+        <visual name="spoke_a1"><pose>0 1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.5 0.02 0.07</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="spoke_b1"><pose>0 1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.07 0.02 0.5</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+      </link>
+      <link name="axle_3">
+        <pose>-3 0 0.5 0 0 0</pose>
+        <kinematic>0</kinematic>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <inertial><mass>1.0</mass>
+          <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
+        </inertial>
+        <visual name="tyre_0"><pose>0 -1.05 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+        <visual name="rim_0"><pose>0 -1.26 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.28</radius><length>0.02</length></cylinder></geometry><material><ambient>0.55 0.55 0.58 1</ambient><diffuse>0.55 0.55 0.58 1</diffuse></material></visual>
+        <visual name="spoke_a0"><pose>0 -1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.5 0.02 0.07</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="spoke_b0"><pose>0 -1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.07 0.02 0.5</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="tyre_1"><pose>0 1.05 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.5</radius><length>0.4</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+        <visual name="rim_1"><pose>0 1.26 0 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.28</radius><length>0.02</length></cylinder></geometry><material><ambient>0.55 0.55 0.58 1</ambient><diffuse>0.55 0.55 0.58 1</diffuse></material></visual>
+        <visual name="spoke_a1"><pose>0 1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.5 0.02 0.07</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+        <visual name="spoke_b1"><pose>0 1.2705 0 0 0 0</pose>
+          <geometry><box><size>0.07 0.02 0.5</size></box></geometry><material><ambient>0.25 0.25 0.27 1</ambient><diffuse>0.25 0.25 0.27 1</diffuse></material></visual>
+      </link>
+      <link name="outrig_0l">
+        <pose>2.4 0.1 0 0 0 0</pose>
+        <kinematic>0</kinematic>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <inertial><mass>1.0</mass>
+          <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
+        </inertial>
+        <visual name="beam"><pose>0 0.45 1 0 0 0</pose>
+          <geometry><box><size>0.35 1.6 0.3</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
+        <visual name="stripe"><pose>0 1.15 1.16 0 0 0</pose>
+          <geometry><box><size>0.36 0.2 0.02</size></box></geometry><material><ambient>0.95 0.55 0.05 1</ambient><diffuse>0.95 0.55 0.05 1</diffuse></material></visual>
+        <visual name="jack"><pose>0 1.15 0.55 0 0 0</pose>
+          <geometry><box><size>0.25 0.25 0.9</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="pad"><pose>0 1.15 0.07 0 0 0</pose>
+          <geometry><box><size>0.7 0.7 0.08</size></box></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+      </link>
+      <link name="outrig_0r">
+        <pose>2.4 -0.1 0 0 0 0</pose>
+        <kinematic>0</kinematic>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <inertial><mass>1.0</mass>
+          <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
+        </inertial>
+        <visual name="beam"><pose>0 -0.45 1 0 0 0</pose>
+          <geometry><box><size>0.35 1.6 0.3</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
+        <visual name="stripe"><pose>0 -1.15 1.16 0 0 0</pose>
+          <geometry><box><size>0.36 0.2 0.02</size></box></geometry><material><ambient>0.95 0.55 0.05 1</ambient><diffuse>0.95 0.55 0.05 1</diffuse></material></visual>
+        <visual name="jack"><pose>0 -1.15 0.55 0 0 0</pose>
+          <geometry><box><size>0.25 0.25 0.9</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="pad"><pose>0 -1.15 0.07 0 0 0</pose>
+          <geometry><box><size>0.7 0.7 0.08</size></box></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+      </link>
+      <link name="outrig_1l">
+        <pose>-4 0.1 0 0 0 0</pose>
+        <kinematic>0</kinematic>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <inertial><mass>1.0</mass>
+          <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
+        </inertial>
+        <visual name="beam"><pose>0 0.45 1 0 0 0</pose>
+          <geometry><box><size>0.35 1.6 0.3</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
+        <visual name="stripe"><pose>0 1.15 1.16 0 0 0</pose>
+          <geometry><box><size>0.36 0.2 0.02</size></box></geometry><material><ambient>0.95 0.55 0.05 1</ambient><diffuse>0.95 0.55 0.05 1</diffuse></material></visual>
+        <visual name="jack"><pose>0 1.15 0.55 0 0 0</pose>
+          <geometry><box><size>0.25 0.25 0.9</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="pad"><pose>0 1.15 0.07 0 0 0</pose>
+          <geometry><box><size>0.7 0.7 0.08</size></box></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
+      </link>
+      <link name="outrig_1r">
+        <pose>-4 -0.1 0 0 0 0</pose>
+        <kinematic>0</kinematic>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <inertial><mass>1.0</mass>
+          <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
+        </inertial>
+        <visual name="beam"><pose>0 -0.45 1 0 0 0</pose>
+          <geometry><box><size>0.35 1.6 0.3</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
+        <visual name="stripe"><pose>0 -1.15 1.16 0 0 0</pose>
+          <geometry><box><size>0.36 0.2 0.02</size></box></geometry><material><ambient>0.95 0.55 0.05 1</ambient><diffuse>0.95 0.55 0.05 1</diffuse></material></visual>
+        <visual name="jack"><pose>0 -1.15 0.55 0 0 0</pose>
+          <geometry><box><size>0.25 0.25 0.9</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
+        <visual name="pad"><pose>0 -1.15 0.07 0 0 0</pose>
+          <geometry><box><size>0.7 0.7 0.08</size></box></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_0">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_1">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_2">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_3">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_4">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_5">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_6">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_7">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_8">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_9">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_10">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_11">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_12">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_13">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_14">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_15">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_16">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_17">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_18">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="rope_19">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>0.1</mass>
           <inertia><ixx>0.1</ixx><iyy>0.1</iyy><izz>0.1</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="rope"><pose>0 0 0.3 0 0 0</pose>
-          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.03</radius><length>0.6</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
       <link name="hook">
         <pose>6.5 0 2.8 0 0 0</pose>
+        <kinematic>0</kinematic>
         <gravity>0</gravity>
         <self_collide>0</self_collide>
         <inertial><mass>1.0</mass>
@@ -338,16 +1023,25 @@
         </inertial>
         <visual name="hook_block"><pose>0 0 -0.3 0 0 0</pose>
           <geometry><box><size>0.5 0.35 0.55</size></box></geometry><material><ambient>0.93 0.74 0.28 1</ambient><diffuse>0.93 0.74 0.28 1</diffuse></material></visual>
+        <visual name="hook_stripe"><pose>0 0 -0.3 0 0 0</pose>
+          <geometry><box><size>0.52 0.37 0.12</size></box></geometry><material><ambient>0.75 0.55 0.15 1</ambient><diffuse>0.75 0.55 0.15 1</diffuse></material></visual>
         <visual name="hook"><pose>0 0 -0.72 1.5708 0 0</pose>
-          <geometry><cylinder><radius>0.12</radius><length>0.08</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.12</radius><length>0.08</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
         <visual name="hook_shank"><pose>0 0 -0.62 0 0 0</pose>
-          <geometry><cylinder><radius>0.04</radius><length>0.2</length></cylinder></geometry><material><ambient>0.15 0.15 0.15 1</ambient><diffuse>0.15 0.15 0.15 1</diffuse></material></visual>
+          <geometry><cylinder><radius>0.04</radius><length>0.2</length></cylinder></geometry><material><ambient>0.12 0.12 0.12 1</ambient><diffuse>0.12 0.12 0.12 1</diffuse></material></visual>
       </link>
-      <joint name="world_fix" type="fixed"><parent>world</parent><child>base_link</child></joint>
       <joint name="slew_joint" type="revolute"><parent>base_link</parent><child>turret</child><axis><xyz>0 0 1</xyz><limit><lower>-1e+06</lower><upper>1e+06</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
       <joint name="luff_joint" type="revolute"><parent>turret</parent><child>boom</child><axis><xyz>0 1 0</xyz><limit><lower>-1.309</lower><upper>-0</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
       <joint name="tele_joint" type="prismatic"><parent>boom</parent><child>tele</child><axis><xyz>1 0 0</xyz><limit><lower>0</lower><upper>6</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
       <joint name="sheave_joint" type="revolute"><parent>tele</parent><child>sheave</child><axis><xyz>0 1 0</xyz><limit><lower>0</lower><upper>1.309</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
+      <joint name="wheel_joint_0" type="revolute"><parent>base_link</parent><child>axle_0</child><axis><xyz>0 1 0</xyz><limit><lower>-1e+09</lower><upper>1e+09</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
+      <joint name="wheel_joint_1" type="revolute"><parent>base_link</parent><child>axle_1</child><axis><xyz>0 1 0</xyz><limit><lower>-1e+09</lower><upper>1e+09</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
+      <joint name="wheel_joint_2" type="revolute"><parent>base_link</parent><child>axle_2</child><axis><xyz>0 1 0</xyz><limit><lower>-1e+09</lower><upper>1e+09</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
+      <joint name="wheel_joint_3" type="revolute"><parent>base_link</parent><child>axle_3</child><axis><xyz>0 1 0</xyz><limit><lower>-1e+09</lower><upper>1e+09</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
+      <joint name="outrig_joint_0l" type="prismatic"><parent>base_link</parent><child>outrig_0l</child><axis><xyz>0 1 0</xyz><limit><lower>0</lower><upper>1.2</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
+      <joint name="outrig_joint_0r" type="prismatic"><parent>base_link</parent><child>outrig_0r</child><axis><xyz>0 -1 0</xyz><limit><lower>0</lower><upper>1.2</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
+      <joint name="outrig_joint_1l" type="prismatic"><parent>base_link</parent><child>outrig_1l</child><axis><xyz>0 1 0</xyz><limit><lower>0</lower><upper>1.2</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
+      <joint name="outrig_joint_1r" type="prismatic"><parent>base_link</parent><child>outrig_1r</child><axis><xyz>0 -1 0</xyz><limit><lower>0</lower><upper>1.2</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
       <joint name="rope_joint_0" type="prismatic"><parent>sheave</parent><child>rope_0</child><axis><xyz>0 0 -1</xyz><limit><lower>0</lower><upper>0.6</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
       <joint name="rope_joint_1" type="prismatic"><parent>rope_0</parent><child>rope_1</child><axis><xyz>0 0 -1</xyz><limit><lower>0</lower><upper>0.6</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
       <joint name="rope_joint_2" type="prismatic"><parent>rope_1</parent><child>rope_2</child><axis><xyz>0 0 -1</xyz><limit><lower>0</lower><upper>0.6</upper><effort>1e6</effort><velocity>10</velocity></limit></axis></joint>
@@ -377,52 +1071,11 @@
       <plugin name="crane_joint_states" filename="libgazebo_ros_joint_state_publisher.so">
         <ros><namespace>/crane</namespace></ros>
         <update_rate>20</update_rate>
-        <joint_name>slew_joint</joint_name><joint_name>luff_joint</joint_name><joint_name>tele_joint</joint_name><joint_name>sheave_joint</joint_name><joint_name>rope_joint_0</joint_name><joint_name>rope_joint_1</joint_name><joint_name>rope_joint_2</joint_name><joint_name>rope_joint_3</joint_name><joint_name>rope_joint_4</joint_name><joint_name>rope_joint_5</joint_name><joint_name>rope_joint_6</joint_name><joint_name>rope_joint_7</joint_name><joint_name>rope_joint_8</joint_name><joint_name>rope_joint_9</joint_name><joint_name>rope_joint_10</joint_name><joint_name>rope_joint_11</joint_name><joint_name>rope_joint_12</joint_name><joint_name>rope_joint_13</joint_name><joint_name>rope_joint_14</joint_name><joint_name>rope_joint_15</joint_name><joint_name>rope_joint_16</joint_name><joint_name>rope_joint_17</joint_name><joint_name>rope_joint_18</joint_name><joint_name>rope_joint_19</joint_name>
+        <joint_name>slew_joint</joint_name><joint_name>luff_joint</joint_name><joint_name>tele_joint</joint_name><joint_name>sheave_joint</joint_name><joint_name>rope_joint_0</joint_name><joint_name>rope_joint_1</joint_name><joint_name>rope_joint_2</joint_name><joint_name>rope_joint_3</joint_name><joint_name>rope_joint_4</joint_name><joint_name>rope_joint_5</joint_name><joint_name>rope_joint_6</joint_name><joint_name>rope_joint_7</joint_name><joint_name>rope_joint_8</joint_name><joint_name>rope_joint_9</joint_name><joint_name>rope_joint_10</joint_name><joint_name>rope_joint_11</joint_name><joint_name>rope_joint_12</joint_name><joint_name>rope_joint_13</joint_name><joint_name>rope_joint_14</joint_name><joint_name>rope_joint_15</joint_name><joint_name>rope_joint_16</joint_name><joint_name>rope_joint_17</joint_name><joint_name>rope_joint_18</joint_name><joint_name>rope_joint_19</joint_name><joint_name>wheel_joint_0</joint_name><joint_name>wheel_joint_1</joint_name><joint_name>wheel_joint_2</joint_name><joint_name>wheel_joint_3</joint_name><joint_name>outrig_joint_0l</joint_name><joint_name>outrig_joint_0r</joint_name><joint_name>outrig_joint_1l</joint_name><joint_name>outrig_joint_1r</joint_name>
       </plugin>
     </model>
 
-    <model name="alan_stok"><static>true</static><pose>-2.0 -9.0 0 0 0 0</pose>
-      <link name="link">
-        <visual name="zemin"><pose>0 0 0.011 0 0 0</pose>
-          <geometry><box><size>5 5 0.02</size></box></geometry><material><ambient>0.55 0.55 0.55 1</ambient><diffuse>0.55 0.55 0.55 1</diffuse></material></visual>
-        <visual name="direk"><pose>2.6 2.6 1 0 0 0</pose>
-          <geometry><cylinder><radius>0.05</radius><length>2.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
-        <visual name="tabela"><pose>2.6 2.6 2.1 0 0 0</pose>
-          <geometry><box><size>1.4 0.06 0.7</size></box></geometry><material><ambient>0.55 0.55 0.55 1</ambient><diffuse>0.55 0.55 0.55 1</diffuse></material></visual>
-      </link>
-    </model>
-    <model name="alan_depo"><static>true</static><pose>-2.0 9.0 0 0 0 0</pose>
-      <link name="link">
-        <visual name="zemin"><pose>0 0 0.011 0 0 0</pose>
-          <geometry><box><size>5 5 0.02</size></box></geometry><material><ambient>0.10 0.35 0.90 1</ambient><diffuse>0.10 0.35 0.90 1</diffuse></material></visual>
-        <visual name="direk"><pose>2.6 2.6 1 0 0 0</pose>
-          <geometry><cylinder><radius>0.05</radius><length>2.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
-        <visual name="tabela"><pose>2.6 2.6 2.1 0 0 0</pose>
-          <geometry><box><size>1.4 0.06 0.7</size></box></geometry><material><ambient>0.10 0.35 0.90 1</ambient><diffuse>0.10 0.35 0.90 1</diffuse></material></visual>
-      </link>
-    </model>
-    <model name="alan_atolye"><static>true</static><pose>-11.0 3.0 0 0 0 0</pose>
-      <link name="link">
-        <visual name="zemin"><pose>0 0 0.011 0 0 0</pose>
-          <geometry><box><size>5 5 0.02</size></box></geometry><material><ambient>0.95 0.45 0.10 1</ambient><diffuse>0.95 0.45 0.10 1</diffuse></material></visual>
-        <visual name="direk"><pose>2.6 2.6 1 0 0 0</pose>
-          <geometry><cylinder><radius>0.05</radius><length>2.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
-        <visual name="tabela"><pose>2.6 2.6 2.1 0 0 0</pose>
-          <geometry><box><size>1.4 0.06 0.7</size></box></geometry><material><ambient>0.95 0.45 0.10 1</ambient><diffuse>0.95 0.45 0.10 1</diffuse></material></visual>
-      </link>
-    </model>
-    <model name="alan_sevkiyat"><static>true</static><pose>-10.0 -6.0 0 0 0 0</pose>
-      <link name="link">
-        <visual name="zemin"><pose>0 0 0.011 0 0 0</pose>
-          <geometry><box><size>5 5 0.02</size></box></geometry><material><ambient>0.10 0.70 0.20 1</ambient><diffuse>0.10 0.70 0.20 1</diffuse></material></visual>
-        <visual name="direk"><pose>2.6 2.6 1 0 0 0</pose>
-          <geometry><cylinder><radius>0.05</radius><length>2.0</length></cylinder></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
-        <visual name="tabela"><pose>2.6 2.6 2.1 0 0 0</pose>
-          <geometry><box><size>1.4 0.06 0.7</size></box></geometry><material><ambient>0.10 0.70 0.20 1</ambient><diffuse>0.10 0.70 0.20 1</diffuse></material></visual>
-      </link>
-    </model>
-
-    <model name="kirmizi_kasa"><pose>-3.2 -10.2 0 0 0 0</pose>
+    <model name="kirmizi_kasa"><pose>-31.2 -10.2 0.03 0 0 0</pose>
       <link name="link">
         <kinematic>1</kinematic><gravity>0</gravity>
         <inertial><mass>500</mass>
@@ -436,7 +1089,7 @@
           <geometry><box><size>1.2 1.2 1.1</size></box></geometry></collision>
       </link>
     </model>
-    <model name="mavi_kasa"><pose>-0.8 -10.2 0 0 0 0</pose>
+    <model name="mavi_kasa"><pose>-28.8 -10.2 0.03 0 0 0</pose>
       <link name="link">
         <kinematic>1</kinematic><gravity>0</gravity>
         <inertial><mass>500</mass>
@@ -450,7 +1103,7 @@
           <geometry><box><size>1.2 1.2 1.1</size></box></geometry></collision>
       </link>
     </model>
-    <model name="beyaz_kasa"><pose>-3.2 -7.8 0 0 0 0</pose>
+    <model name="beyaz_kasa"><pose>-31.2 -7.8 0.03 0 0 0</pose>
       <link name="link">
         <kinematic>1</kinematic><gravity>0</gravity>
         <inertial><mass>500</mass>
@@ -464,29 +1117,16 @@
           <geometry><box><size>1.2 1.2 1.1</size></box></geometry></collision>
       </link>
     </model>
-    <model name="beton_blok"><pose>-0.8 -7.8 0 0 0 0</pose>
+    <model name="beton_blok"><pose>-28.8 -7.8 0.03 0 0 0</pose>
       <link name="link">
         <kinematic>1</kinematic><gravity>0</gravity>
         <inertial><mass>500</mass>
           <inertia><ixx>100</ixx><iyy>100</iyy><izz>100</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia>
         </inertial>
         <visual name="blok"><pose>0 0 0.4 0 0 0</pose>
-          <geometry><box><size>1.6 1 0.8</size></box></geometry><material><ambient>0.40 0.40 0.48 1</ambient><diffuse>0.40 0.40 0.48 1</diffuse></material></visual>
+          <geometry><box><size>1.6 1 0.8</size></box></geometry><material><ambient>0.50 0.50 0.48 1</ambient><diffuse>0.50 0.50 0.48 1</diffuse></material></visual>
         <collision name="col_col"><pose>0 0 0.4 0 0 0</pose>
           <geometry><box><size>1.6 1 0.8</size></box></geometry></collision>
-      </link>
-    </model>
-
-    <model name="atolye_binasi"><static>true</static><pose>-17.0 3.0 0 0 0 0</pose>
-      <link name="link">
-        <visual name="bina"><pose>0 0 3 0 0 0</pose>
-          <geometry><box><size>5 8 6</size></box></geometry><material><ambient>0.70 0.45 0.35 1</ambient><diffuse>0.70 0.45 0.35 1</diffuse></material></visual>
-        <collision name="bina_col"><pose>0 0 3 0 0 0</pose>
-          <geometry><box><size>5 8 6</size></box></geometry></collision>
-        <visual name="kapi"><pose>2.51 0 1.6 0 0 0</pose>
-          <geometry><box><size>0.02 3 3.2</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
-        <visual name="cati"><pose>0 0 6.1 0 0 0</pose>
-          <geometry><box><size>5.4 8.4 0.2</size></box></geometry><material><ambient>0.40 0.40 0.42 1</ambient><diffuse>0.40 0.40 0.42 1</diffuse></material></visual>
       </link>
     </model>
   </world>

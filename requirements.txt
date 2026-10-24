@@ -2,3 +2,9 @@ faster-whisper
 sounddevice
 numpy
 rapidfuzz
+python-can
+cantools
+pyyaml
+opencv-python
+onnxruntime
+piper-tts
